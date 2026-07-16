@@ -1,0 +1,459 @@
+.tutor-course-details-page {
+  position: relative;
+  --jlc-carousel-dark: #231f20;
+  --jlc-carousel-primary: #ff5f00;
+  --jlc-carousel-muted: #6b7280;
+  --jlc-carousel-border: #eee7e2;
+  --jlc-carousel-card-bg: #ffffff;
+  --jlc-carousel-shadow: 0 14px 36px rgba(35, 31, 32, 0.08);
+  --jlc-carousel-shadow-hover: 0 22px 55px rgba(35, 31, 32, 0.14);
+}
+
+.tutor-video-player .plyr {
+  --plyr-color-main: #ff5f00;
+  --plyr-video-control-color: #ffffff;
+  --plyr-video-control-color-hover: #ffffff;
+  --plyr-video-control-background-hover: rgba(247, 148, 29, 0.15);
+  --plyr-range-fill-background: #ff5f00;
+  --plyr-range-thumb-background: #ff5f00;
+  --plyr-menu-background: #ffffff;
+  --plyr-menu-color: #41454f;
+  --plyr-tooltip-background: #ff5f00;
+  --plyr-tooltip-color: #ffffff;
+}
+
+.tutor-course-details-page {
+  padding: 40px 0 80px;
+}
+
+.tutor-course-details-page .tutor-container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
+.tutor-course-details-header {
+  margin-bottom: 40px;
+}
+
+.tutor-course-details-ratings {
+  display: none;
+}
+
+.tutor-course-details-header h1 {
+  font-family: "Cinzel";
+  color: #231f20 !important;
+  margin: 0 0 20px;
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.tutor-course-details-header h1::after {
+  content: "La verdadera belleza no se impone de forma artificial; se despierta de manera natural cuando el tejido muscular recupera su movilidad, la piel encuentra su equilibrio fisiológico y el bienestar integral se convierte en el eje central del tratamiento.";
+  display: block;
+  font-family: "Manrope", Sans-serif;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #231f20 !important;
+  max-width: 850px;
+}
+
+.tutor-course-details-header p {
+  margin: 0;
+}
+
+.tutor-course-details-page .tutor-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 48px;
+  align-items: start;
+}
+
+.tutor-course-details-page main {
+  width: 100%;
+}
+
+.tutor-course-thumbnail img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+.tutor-course-details-page aside {
+  position: sticky;
+  top: 120px;
+  width: 100%;
+}
+
+.tutor-course-sidebar-card {
+  border-radius: 20px;
+}
+
+.tutor-nav-tabs {
+  margin-top: 50px;
+}
+
+.tutor-course-details-content {
+  margin-top: 40px;
+}
+
+.tutor-course-details-page
+  .tutor-course-details-header
+  .tutor-course-details-top {
+  display: none;
+}
+
+#tutor-course-details-tab-reviews
+  .tutor-pagination-wrapper-replaceable
+  .tutor-empty-state
+  .tutor-text-center {
+  font-size: 0;
+}
+
+#tutor-course-details-tab-reviews
+  .tutor-pagination-wrapper-replaceable
+  .tutor-empty-state
+  .tutor-text-center::before {
+  content: "Aún no hay reseñas";
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  color: #41454f;
+}
+
+.tutor-course-details-page
+  .tutor-row
+  aside
+  .tutor-card-body
+  form
+  .tutor-add-to-cart-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  margin: 20px 0 0 0 !important;
+  padding: 0 18px;
+  border-radius: 12px;
+  background: var(--jlc-carousel-primary) !important;
+  color: #ffffff !important;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid var(--jlc-carousel-primary) !important;
+  box-shadow: 0 10px 22px rgba(255, 95, 0, 0.22);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.tutor-course-details-page
+  .tutor-row
+  aside
+  .tutor-card-body
+  form
+  .tutor-add-to-cart-button:hover {
+  background: #eb5d09 !important;
+  border-color: var(--jlc-carousel-primary) !important;
+  box-shadow: 0 14px 30px rgba(255, 95, 0, 0.28);
+  transform: translateY(-2px);
+}
+
+.tutor-course-details-instructors .tutor-d-flex {
+  display: none !important;
+}
+
+.tutor-course-details-instructors h3 {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  grid-template-rows: auto auto auto;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.tutor-course-details-instructors h3::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / 4;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: url("http://nataliabustillo.local/wp-content/uploads/NBC-RETRATO.webp")
+    center/cover no-repeat;
+}
+
+.tutor-course-details-instructors h3::after {
+  content: "Natalia Bustillo";
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #2d2d2d;
+  margin: 0;
+}
+
+.tutor-course-details-instructors::after {
+  content: "Especialista en Estética Facial\AMás de 33 años de experiencia";
+  white-space: pre-line;
+  display: block;
+  margin: -30px 0 0 84px;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #6b7280;
+}
+
+/* Video */
+.tutor-video-player {
+  min-height: 489px !important;
+  border-radius: 30px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12) !important;
+}
+
+.tutor-video-player .plyr {
+  border-radius: 30px !important;
+  overflow: hidden !important;
+}
+
+.tutor-video-player .plyr__video-wrapper {
+  background: #ffffff !important;
+  height: 100% !important;
+}
+
+.tutor-video-player .plyr--video {
+  border-radius: 30px !important;
+  height: 100% !important;
+}
+
+.tutor-video-player .plyr__controls {
+  padding: 16px 20px !important;
+  background: rgba(17, 17, 17, 0.95) !important;
+}
+
+.tutor-video-player .plyr__control {
+  border-radius: 10px !important;
+  transition: 0.25s !important;
+  color: #ff5f00 !important;
+  border: 1px solid #ff5f00 !important;
+}
+
+.tutor-video-player .plyr__control:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.tutor-video-player .plyr__progress__container {
+  margin-inline: 16px !important;
+}
+
+.tutor-video-player .plyr__volume {
+  min-width: 110px !important;
+}
+
+.tutor-video-player .plyr--full-ui input[type="range"] {
+  color: #ff5f00 !important;
+}
+
+.tutor-video-player .plyr__controls {
+  padding: 16px 18px !important;
+  background: rgba(18, 18, 18, 0.92) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.jlc-single-courses.tutor-wrap
+  .tutor-course-details-page
+  .tutor-video-player
+  .plyr
+  .plyr__controls
+  .plyr__controls__item {
+  border-radius: 10px !important;
+  transition: 0.25s !important;
+}
+
+.jlc-single-courses.tutor-wrap
+  .tutor-course-details-page
+  .tutor-video-player
+  .plyr
+  .plyr__controls
+  .plyr__controls__item
+  svg {
+  fill: #ff5f00 !important;
+}
+
+.tutor-video-player .plyr__control:hover {
+  background: rgba(247, 148, 29, 0.15) !important;
+}
+
+.tutor-video-player .plyr__progress__container {
+  margin-inline: 16px !important;
+}
+
+.tutor-video-player .plyr__volume {
+  min-width: 110px !important;
+}
+
+.tutor-course-details-content h2 {
+  font-size: 22px !important;
+}
+
+.tutor-course-content-title {
+  font-size: 0 !important;
+}
+
+.tutor-course-content-title::before {
+  content: "Contenido del Curso";
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #41454f;
+}
+
+.tutor-course-details-tab
+  .tutor-is-sticky
+  .tutor-nav
+  .tutor-nav-item
+  [data-tutor-nav-target="tutor-course-details-tab-reviews"] {
+  display: none;
+}
+
+.tutor-course-details-tab
+  .tutor-is-sticky
+  .tutor-nav
+  .tutor-nav-item
+  .is-active {
+  font-weight: 700;
+  background: #f5f5f5;
+  border-radius: 8px 8px 0 0;
+}
+
+.woocommerce-Price-amount {
+  display: block;
+  margin-block-end: 0;
+  font-size: clamp(24px, 2.2vw, 32px) !important;
+  font-weight: 800;
+  line-height: 1.2;
+  /* color: #ff5f00; */
+  font-family: "Cinzel";
+}
+
+.woocommerce-Price-amount::after {
+  content: "Pago único • Acceso de por vida";
+  font-family: "Manrope", Sans-serif !important;
+  display: block;
+  margin-top: 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6b7280;
+  letter-spacing: 0.2px;
+}
+
+.jlc-course-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid #ececec;
+}
+
+.jlc-course-benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.jlc-course-benefit__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ff5f00;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.jlc-course-benefit__text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #41454f;
+}
+
+.tutor-icon-level::before,
+.tutor-icon-refresh-o::before {
+  display: none;
+}
+
+.tutor-card-footer {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .tutor-course-details-page .tutor-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .tutor-course-details-page aside {
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .tutor-course-details-page .tutor-row {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+
+  .tutor-course-details-page {
+    padding: 50px 20px !important;
+  }
+
+  .tutor-course-details-header {
+    margin-bottom: 0px !important;
+  }
+
+  .tutor-course-details-header h1 {
+    font-size: 32px !important;
+    text-align: center !important;
+  }
+
+  .tutor-single-course-sidebar {
+    margin-top: 8px !important;
+  }
+
+  .tutor-course-details-header h1::after {
+    text-align: center !important;
+  }
+
+  .tutor-course-details-instructors h3 {
+    line-height: 1.2;
+    font-size: 0.85rem;
+  }
+
+  .tutor-course-details-instructors::after {
+    margin: -40px 0 0 84px;
+    font-size: 12px;
+  }
+
+  /* .woocommerce-Price-amount {
+    text-align: center;
+  } */
+
+  .tutor-accordion-item-header {
+    font-size: 1rem !important;
+  }
+}
