@@ -98,7 +98,7 @@ class JLC_Course_Sidebar
 
             <div class="jlc-course-bonus__value">
                 Valorada en
-                <del>$250.000 COP</del>
+                <del>$170.000 COP</del>
             </div>
 
             <div class="jlc-course-bonus__free">
