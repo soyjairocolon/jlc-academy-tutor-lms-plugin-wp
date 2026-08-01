@@ -83,36 +83,58 @@ class JLC_Course_Sidebar
         <div class="jlc-course-bonus">
 
             <span class="jlc-course-bonus__badge">
-                🎁 BONO EXCLUSIVO
+                🎁 BONUS EXCLUSIVOS
             </span>
 
             <h3 class="jlc-course-bonus__title">
-                Asesoría personalizada
+                <!-- <span class="jlc-course-benefit__icon">✓</span> -->
+                ✓ Convierte tu cabina
                 <br>
-                por videollamada
+                en un SPA
+                <br>
+                ⭐️⭐️⭐️⭐️⭐
             </h3>
 
-            <div class="jlc-course-bonus__duration">
-                45 minutos
+            <div class="jlc-course-bonus__item">
+                <p>
+                    ✓ Manual PDF descargable
+                    <br>
+                    método facialista
+                </p>
             </div>
 
-            <div class="jlc-course-bonus__value">
+            <div class="jlc-course-bonus__item">
+                <p>
+                    ✓ Masterclass en vivo
+                </p>
+            </div>
+
+            <div class="jlc-course-bonus__item--wsp">
+                <p>
+                    ✓ WSP grupal comunidad facialista.
+                </p>
+                <span>
+                    En donde te actualizarás en tips cada semana
+                </span>
+            </div>
+
+            <!-- <div class="jlc-course-bonus__value">
                 Valorada en
                 <del>$170.000 COP</del>
-            </div>
+            </div> -->
 
             <div class="jlc-course-bonus__free">
-                HOY GRATIS
+                INCLUIDO HOY
             </div>
 
             <div class="jlc-course-bonus__subtitle">
                 con tu inscripción
             </div>
 
-            <p class="jlc-course-bonus__description">
+            <!-- <p class="jlc-course-bonus__description">
                 Exclusiva para estudiantes
                 de este curso.
-            </p>
+            </p> -->
 
         </div>
 <?php
