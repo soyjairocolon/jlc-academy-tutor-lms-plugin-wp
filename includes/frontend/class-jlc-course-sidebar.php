@@ -86,26 +86,21 @@ class JLC_Course_Sidebar
                 🎁 BONUS EXCLUSIVOS
             </span>
 
-            <h3 class="jlc-course-bonus__title">
-                <!-- <span class="jlc-course-benefit__icon">✓</span> -->
-                ✓ Convierte tu cabina
-                <br>
-                en un SPA
-                <br>
-                ⭐️⭐️⭐️⭐️⭐
-            </h3>
+            <div class="jlc-course-bonus__item jlc-course-bonus__item--masterclass">
+                <h3 class="jlc-course-bonus__title">
+                    <!-- <span class="jlc-course-benefit__icon">✓</span> -->
+                    ✓ Masterclass en vivo
+                </h3>
+                <span>
+                    Convierte tu cabina en un SPA <br> ⭐️⭐️⭐️⭐️⭐
+                </span>
+            </div>
 
             <div class="jlc-course-bonus__item">
                 <p>
                     ✓ Manual PDF descargable
                     <br>
                     método facialista
-                </p>
-            </div>
-
-            <div class="jlc-course-bonus__item">
-                <p>
-                    ✓ Masterclass en vivo
                 </p>
             </div>
 
@@ -118,11 +113,6 @@ class JLC_Course_Sidebar
                 </span>
             </div>
 
-            <!-- <div class="jlc-course-bonus__value">
-                Valorada en
-                <del>$170.000 COP</del>
-            </div> -->
-
             <div class="jlc-course-bonus__free">
                 INCLUIDO HOY
             </div>
@@ -130,12 +120,6 @@ class JLC_Course_Sidebar
             <div class="jlc-course-bonus__subtitle">
                 con tu inscripción
             </div>
-
-            <!-- <p class="jlc-course-bonus__description">
-                Exclusiva para estudiantes
-                de este curso.
-            </p> -->
-
         </div>
 <?php
     }
