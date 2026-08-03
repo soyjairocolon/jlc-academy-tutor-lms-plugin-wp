@@ -117,7 +117,7 @@ class JLC_Course_FAQ
                         </div>
                     </div>
 
-                    <div class="jlc-course-faq__item">
+                    <!-- <div class="jlc-course-faq__item">
                         <button class="jlc-course-faq__question">
                             ¿Cómo funciona el bono de asesoría?
                         </button>
@@ -125,7 +125,7 @@ class JLC_Course_FAQ
                         <div class="jlc-course-faq__answer">
                             Una vez adquieras el curso podrás agendar una videollamada personalizada de 45 minutos con Natalia Bustillo.
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="jlc-course-faq__item">
                         <button class="jlc-course-faq__question">
