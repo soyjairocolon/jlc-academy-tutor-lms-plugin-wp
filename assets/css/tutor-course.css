@@ -255,6 +255,7 @@
 }
 
 .tutor-video-player .plyr--video {
+  border: 1px solid #212121;
   border-radius: 5px !important;
   height: 489px !important;
 }
@@ -821,7 +822,7 @@ a.tutor-btn:focus:not(:disabled):not([disabled]):not(.disabled),
 
 .jlc-single-courses {
   overflow-x: hidden !important;
-} 
+}
 
 @media (max-width: 767px) {
   .jlc-course-faq-cta {
