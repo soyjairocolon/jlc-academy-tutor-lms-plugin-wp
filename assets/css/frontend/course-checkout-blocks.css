@@ -151,10 +151,10 @@ body.jlc-course-checkout-blocks
   padding: 4px 12px 12px 14px !important;
 }
 
-body.jlc-course-checkout-blocks
+/* body.jlc-course-checkout-blocks
   .wc-block-components-product-metadata__description {
   display: none !important;
-}
+} */
 
 body.jlc-course-checkout-blocks .wc-block-components-totals-footer-item {
   margin-top: -15px;

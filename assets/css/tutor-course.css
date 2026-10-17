@@ -819,6 +819,10 @@ a.tutor-btn:focus:not(:disabled):not([disabled]):not(.disabled),
   outline-offset: 3px;
 }
 
+.jlc-single-courses {
+  overflow-x: hidden !important;
+} 
+
 @media (max-width: 767px) {
   .jlc-course-faq-cta {
     max-width: 90%;
