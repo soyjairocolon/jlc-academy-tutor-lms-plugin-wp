@@ -1,0 +1,255 @@
+/**
+ * JLC Academy — Physical Checkout Blocks
+ * Estilos para productos físicos y carritos mixtos.
+ */
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks) #content {
+  padding: 30px 30px 50px;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .page-content {
+  border: 0 solid transparent;
+  box-shadow: none;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .entry-title {
+  display: none;
+}
+
+/* Campos de facturación */
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-form
+  .wc-block-components-text-input
+  input,
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-text-input
+  input {
+  border: 1px solid #e9dada !important;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-address-card {
+  margin-top: 12px;
+  background-color: #fff;
+  border: 1px solid #e9dada !important;
+  border-radius: 12px !important;
+  box-sizing: border-box;
+  color: #2b2d2f;
+  width: 100%;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-address-card__edit:hover {
+  background-color: #ff5f00;
+  color: #fff;
+}
+
+/* Opciones de pago */
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-radio-control--highlight-checked
+  .wc-block-components-radio-control-accordion-option--checked-option-highlighted,
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-radio-control--highlight-checked
+  label.wc-block-components-radio-control__option--checked-option-highlighted {
+  border-radius: 12px !important;
+  border: 1px solid #e9dada !important;
+  box-shadow: inset 0 0 0 1.5px transparent !important;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-radio-control--highlight-checked::after {
+  border: 0 !important;
+}
+
+/* Resumen del pedido */
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wp-block-woocommerce-checkout-order-summary-block {
+  border-radius: 12px !important;
+  border: 1px solid #e9dada !important;
+  background: #f5f5f5;
+}
+
+body.jlc-physical-checkout-blocks
+  .wc-blocks-components-select
+  .wc-blocks-components-select__select,
+body.jlc-mixed-checkout-blocks
+  .wc-blocks-components-select
+  .wc-blocks-components-select__select {
+  border: 1px solid #e9dada !important;
+  border-radius: 12px !important;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-totals-wrapper {
+  border-top: 0 !important;
+  padding: 8px 0 0 !important;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wp-block-woocommerce-checkout-order-summary-totals-block {
+  border-top: 0 !important;
+  padding: 0 0 8px !important;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-order-summary-item__description
+  .wc-block-cart-item__prices {
+  display: none;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-order-summary
+  .wc-block-components-order-summary-item__description {
+  padding: 4px 12px 12px 14px !important;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-product-metadata__description {
+  display: none !important;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-totals-footer-item {
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-order-summary-item__quantity {
+  border-radius: 7px !important;
+  font-weight: 600 !important;
+}
+
+/* Términos y condiciones */
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-checkout__terms.wc-block-checkout__terms--with-separator {
+  border-top: 0;
+  padding-top: 0;
+}
+
+/* Botón de compra */
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-checkout-place-order-button__text {
+  font-size: 0;
+  min-height: 50px !important;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-checkout-place-order-button__text::after {
+  content: "Pagar ahora";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+body.jlc-physical-checkout-blocks .wc-block-components-checkout-step__title,
+body.jlc-mixed-checkout-blocks .wc-block-components-checkout-step__title {
+  font-weight: 700;
+}
+
+/* Encabezado de pago */
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  #payment-method
+  .wc-block-components-checkout-step__title {
+  font-size: 0;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  #payment-method
+  .wc-block-components-checkout-step__title::before {
+  content: "Pago";
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  #payment-method
+  .wc-block-components-checkout-step__title::after {
+  content: "Todas las transacciones son seguras y están encriptadas.";
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* Cupones */
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-totals-coupon
+  .wc-block-components-panel__button {
+  font-size: 0;
+}
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wc-block-components-totals-coupon
+  .wc-block-components-panel__button::after {
+  content: "¿Tienes un cupón de descuento?";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: inherit;
+}
+
+/* Ocultar título duplicado del resumen */
+
+body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+  .wp-block-woocommerce-checkout-order-summary-block
+  .wc-block-components-checkout-order-summary__title {
+  display: none;
+}
+
+body.jlc-physical-checkout-blocks
+  .wc-block-checkout__actions
+  .wc-block-components-checkout-step__heading,
+body.jlc-mixed-checkout-blocks
+  .wc-block-checkout__actions
+  .wc-block-components-checkout-step__heading {
+  display: none !important;
+}
+
+body.jlc-physical-checkout-blocks
+  .wc-block-components-order-summary-item
+  .wc-block-components-order-summary-item__image
+  img,
+body.jlc-mixed-checkout-blocks
+  .wc-block-components-order-summary-item
+  .wc-block-components-order-summary-item__image
+  img {
+  border: 2px solid #231f29;
+}
+
+@media (max-width: 768px) {
+  body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks) #content {
+    padding: 5px 10px 50px !important;
+  }
+
+  body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+    .wp-block-woocommerce-checkout {
+    margin: 0;
+    padding-top: 0;
+  }
+
+  body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+    .page-content {
+    padding: 0;
+  }
+
+  body:is(.jlc-physical-checkout-blocks, .jlc-mixed-checkout-blocks)
+    .wp-block-woocommerce-checkout-order-summary-block
+    .checkout-order-summary-block-fill {
+    border: 0 !important;
+    border-radius: 0 !important;
+  }
+}

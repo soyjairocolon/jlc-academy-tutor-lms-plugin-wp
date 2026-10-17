@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 
 /**
  * Personalización de WooCommerce Checkout Blocks
- * para carritos que contienen únicamente cursos online.
+ * para cursos online y estilos generales del checkout.
  */
 class JLC_Course_Checkout_Blocks
 {
@@ -24,11 +24,20 @@ class JLC_Course_Checkout_Blocks
             [$this, 'require_course_phone'],
             999
         );
+
+        add_filter(
+            'body_class',
+            [$this, 'add_checkout_body_class']
+        );
+
+        add_action(
+            'wp_enqueue_scripts',
+            [$this, 'enqueue_styles']
+        );
     }
 
     /**
-     * Comprueba si todos los productos del carrito
-     * son cursos online virtuales.
+     * Identifica carritos exclusivos de cursos virtuales.
      *
      * @return bool
      */
@@ -62,8 +71,6 @@ class JLC_Course_Checkout_Blocks
                 return false;
             }
 
-            // Las variaciones utilizan la categoría
-            // del producto padre.
             $product_id = $product->get_parent_id()
                 ?: $product->get_id();
 
@@ -82,8 +89,7 @@ class JLC_Course_Checkout_Blocks
     }
 
     /**
-     * Personaliza los campos de dirección
-     * compatibles con Checkout Blocks.
+     * Oculta campos de dirección para cursos.
      *
      * @param array $locale
      * @return array
@@ -97,7 +103,6 @@ class JLC_Course_Checkout_Blocks
             return $locale;
         }
 
-        // Configuración específica para Colombia.
         if (
             !isset($locale['CO'])
             || !is_array($locale['CO'])
@@ -126,7 +131,6 @@ class JLC_Course_Checkout_Blocks
             $locale['CO'][$field]['hidden'] = true;
         }
 
-        // Mantener el teléfono visible y obligatorio.
         if (
             !isset($locale['CO']['phone'])
             || !is_array($locale['CO']['phone'])
@@ -137,13 +141,11 @@ class JLC_Course_Checkout_Blocks
         $locale['CO']['phone']['required'] = true;
         $locale['CO']['phone']['hidden'] = false;
 
-        // País, nombre y apellidos permanecen visibles.
         return $locale;
     }
 
     /**
-     * Solicita teléfono obligatorio únicamente
-     * para carritos exclusivos de cursos.
+     * Hace obligatorio el teléfono para cursos.
      *
      * @param mixed $value
      * @return mixed
@@ -155,5 +157,134 @@ class JLC_Course_Checkout_Blocks
         }
 
         return $value;
+    }
+
+    /**
+     * Agrega una clase al body según el tipo de carrito.
+     *
+     * @param array $classes
+     * @return array
+     */
+    public function add_checkout_body_class($classes)
+    {
+        if (
+            !function_exists('is_checkout')
+            || !is_checkout()
+            || !function_exists('WC')
+            || !WC()
+            || !WC()->cart
+        ) {
+            return $classes;
+        }
+
+        $items = WC()->cart->get_cart();
+
+        if (empty($items)) {
+            return $classes;
+        }
+
+        // Conservar la clasificación exclusiva de cursos.
+        if ($this->is_course_checkout()) {
+            $classes[] = 'jlc-course-checkout-blocks';
+
+            return $classes;
+        }
+
+        $has_courses = false;
+        $has_physical = false;
+
+        foreach ($items as $item) {
+            $product = isset($item['data'])
+                ? $item['data']
+                : false;
+
+            if (
+                !$product
+                || !is_a($product, 'WC_Product')
+            ) {
+                return $classes;
+            }
+
+            $product_id = $product->get_parent_id()
+                ?: $product->get_id();
+
+            $is_course = $product->is_virtual()
+                && has_term(
+                    'cursos-online',
+                    'product_cat',
+                    $product_id
+                );
+
+            if ($is_course) {
+                $has_courses = true;
+            } else {
+                $has_physical = true;
+            }
+        }
+
+        if ($has_courses && $has_physical) {
+            $classes[] = 'jlc-mixed-checkout-blocks';
+        } elseif ($has_physical) {
+            $classes[] = 'jlc-physical-checkout-blocks';
+        }
+
+        return $classes;
+    }
+
+
+    /**
+     * Carga los estilos de Checkout Blocks.
+     *
+     * Global: todos los tipos de carrito.
+     * Cursos: únicamente cursos online.
+     *
+     * @return void
+     */
+    public function enqueue_styles()
+    {
+        if (
+            !function_exists('is_checkout')
+            || !is_checkout()
+        ) {
+            return;
+        }
+
+        // Estilos generales del checkout.
+        $global_relative_path = 'assets/css/frontend/physical-checkout-blocks.css';
+        $global_file_path = JLC_ACADEMY_PATH . $global_relative_path;
+
+        if (file_exists($global_file_path)) {
+            wp_enqueue_style(
+                'jlc-checkout-blocks-global',
+                plugins_url(
+                    $global_relative_path,
+                    JLC_ACADEMY_PATH . 'jlc-academy.php'
+                ),
+                [],
+                filemtime($global_file_path)
+            );
+        }
+
+        // Estilos exclusivos para cursos online.
+        if (!$this->is_course_checkout()) {
+            return;
+        }
+
+        $course_relative_path = 'assets/css/frontend/course-checkout-blocks.css';
+        $course_file_path = JLC_ACADEMY_PATH . $course_relative_path;
+
+        if (!file_exists($course_file_path)) {
+            return;
+        }
+
+        wp_enqueue_style(
+            'jlc-course-checkout-blocks',
+            plugins_url(
+                $course_relative_path,
+                JLC_ACADEMY_PATH . 'jlc-academy.php'
+            ),
+            ['jlc-checkout-blocks-global'],
+            filemtime($course_file_path)
+        );
     }
 }

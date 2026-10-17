@@ -136,7 +136,7 @@ class JLC_Course_Sidebar
         if (
             is_singular('courses')
             && get_queried_object_id() === get_the_ID()
-            && get_post_field('post_name', get_the_ID()) === 'curso-facialista'
+            && get_post_field('post_name', get_the_ID()) === 'curso-digital-facialista'
         ) {
             return 'Comprar Curso';
         }
