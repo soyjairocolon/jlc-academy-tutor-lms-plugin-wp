@@ -1,0 +1,329 @@
+body.jlc-course-checkout-blocks #content {
+  padding: 30px 30px 50px;
+}
+
+body.jlc-course-checkout-blocks .page-content {
+  border: 0px solid transparent;
+  box-shadow: 0 0px 0px transparent;
+}
+
+body.jlc-course-checkout-blocks .entry-title {
+  display: none;
+}
+
+.jlc-finalizar-compra .entry-title {
+  display: none !important;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-checkout__contact-fields
+  .wc-block-components-checkout-step__title {
+  font-size: 0;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-checkout__contact-fields
+  .wc-block-components-checkout-step__title::after {
+  content: "Tus datos";
+  display: inline;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-checkout__billing-fields
+  .wc-block-components-checkout-step__heading {
+  display: none;
+}
+
+body.jlc-course-checkout-blocks .wc-block-checkout__contact-fields {
+  margin-bottom: 12px;
+}
+
+body.jlc-course-checkout-blocks .wc-block-checkout__billing-fields {
+  margin-top: 0;
+}
+
+body.jlc-course-checkout-blocks
+  .wp-block-woocommerce-checkout-billing-address-block
+  .wc-block-components-checkout-step__heading-container {
+  margin-bottom: 0;
+}
+
+body.jlc-course-checkout-blocks label[for="billing-phone"] {
+  font-size: 0;
+}
+
+body.jlc-course-checkout-blocks label[for="billing-phone"]::after {
+  content: "Número de WhatsApp";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: inherit;
+}
+
+body.jlc-course-checkout-blocks .wc-block-components-country-input {
+  display: none;
+}
+
+body.jlc-course-checkout-blocks
+  .wp-block-woocommerce-checkout-contact-information-block {
+  margin-bottom: 0 !important;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-components-address-address-wrapper
+  .wc-block-components-address-card-wrapper
+  .wc-block-components-address-card {
+  margin-top: 12px;
+  background-color: #fff;
+  border: 1px solid #e9dada !important;
+  border-radius: 12px !important;
+  box-sizing: border-box;
+  color: #2b2d2f;
+  width: 100%;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-components-address-address-wrapper
+  .wc-block-components-address-card-wrapper
+  .wc-block-components-address-card
+  .wc-block-components-address-card__edit:hover {
+  background-color: #ff5f00;
+  color: #fff;
+}
+
+.wc-block-components-radio-control--highlight-checked
+  .wc-block-components-radio-control-accordion-option--checked-option-highlighted,
+.wc-block-components-radio-control--highlight-checked
+  label.wc-block-components-radio-control__option--checked-option-highlighted {
+  border-radius: 12px !important;
+  border: 1px solid #e9dada !important;
+}
+
+.wc-block-components-radio-control--highlight-checked
+  .wc-block-components-radio-control-accordion-option--checked-option-highlighted,
+.wc-block-components-radio-control--highlight-checked
+  label.wc-block-components-radio-control__option--checked-option-highlighted {
+  box-shadow: inset 0 0 0 1.5px rgb(51 51 51 / 0%) !important;
+}
+
+.wc-block-components-radio-control--highlight-checked:after {
+  border: 0px solid #ffffff !important;
+}
+
+body.jlc-course-checkout-blocks
+  .wp-block-woocommerce-checkout-order-summary-block {
+  border-radius: 12px !important;
+  border: 1px solid #e9dada !important;
+  background: #f5f5f5;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-blocks-components-select
+  .wc-blocks-components-select__select {
+  border: 1px solid #e9dada !important;
+  border-radius: 12px !important;
+}
+
+body.jlc-course-checkout-blocks .wc-block-components-totals-wrapper {
+  border-top: 0px solid
+    var(--wc-separator-color, color-mix(in srgb, currentColor 20%, transparent));
+  padding: 8px 0 0 0 !important;
+}
+
+body.jlc-course-checkout-blocks
+  .wp-block-woocommerce-checkout-order-summary-totals-block {
+  border-top: 0px solid
+    var(--wc-separator-color, color-mix(in srgb, currentColor 20%, transparent));
+  padding: 0 0 8px 0 !important;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-components-order-summary-item__description
+  .wc-block-cart-item__prices {
+  display: none;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-components-order-summary
+  .wc-block-components-order-summary-item__description {
+  padding: 4px 12px 12px 14px !important;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-components-product-metadata__description {
+  display: none !important;
+}
+
+body.jlc-course-checkout-blocks .wc-block-components-totals-footer-item {
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+.wc-block-components-form .wc-block-components-text-input input[type="date"],
+.wc-block-components-form .wc-block-components-text-input input[type="email"],
+.wc-block-components-form .wc-block-components-text-input input[type="number"],
+.wc-block-components-form
+  .wc-block-components-text-input
+  input[type="password"],
+.wc-block-components-form .wc-block-components-text-input input[type="tel"],
+.wc-block-components-form .wc-block-components-text-input input[type="text"],
+.wc-block-components-form .wc-block-components-text-input input[type="url"],
+.wc-block-components-text-input input[type="date"],
+.wc-block-components-text-input input[type="email"],
+.wc-block-components-text-input input[type="number"],
+.wc-block-components-text-input input[type="password"],
+.wc-block-components-text-input input[type="tel"],
+.wc-block-components-text-input input[type="text"],
+.wc-block-components-text-input input[type="url"] {
+  border: 1px solid #e9dada !important;
+}
+
+body.jlc-course-checkout-blocks
+  .wp-block-woocommerce-checkout-order-note-block {
+  display: none !important;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-checkout__terms.wc-block-checkout__terms--with-separator {
+  border-top: 0px solid transparent;
+  padding-top: 0;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-components-checkout-place-order-button__text {
+  font-size: 0;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-components-checkout-place-order-button__text {
+  min-height: 50px !important;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-components-checkout-place-order-button__text::after {
+  content: "Pagar ahora";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+body.jlc-course-checkout-blocks
+  #payment-method
+  .wc-block-components-checkout-step__title {
+  font-size: 0;
+}
+
+body.jlc-course-checkout-blocks
+  #payment-method
+  .wc-block-components-checkout-step__title::before {
+  content: "Pago";
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+body.jlc-course-checkout-blocks
+  #payment-method
+  .wc-block-components-checkout-step__title::after {
+  content: "Todas las transacciones son seguras y están encriptadas.";
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #666;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-components-totals-coupon
+  .wc-block-components-panel__button {
+  font-size: 0;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-components-totals-coupon
+  .wc-block-components-panel__button::after {
+  content: "¿Tienes un cupón de descuento?";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: inherit;
+}
+
+body.jlc-course-checkout-blocks
+  .wp-block-woocommerce-checkout-order-summary-block
+  .wc-block-components-checkout-order-summary__title {
+  display: none;
+}
+
+.wc-block-components-order-summary
+  .wc-block-components-order-summary-item__quantity {
+  border-radius: 7px !important;
+  font-weight: 600 !important;
+}
+
+[type="button"],
+[type="submit"],
+button {
+  color: #231f20 !important;
+}
+
+[type="button"]:focus,
+[type="button"]:hover,
+[type="submit"]:focus,
+[type="submit"]:hover,
+button:focus,
+button:hover {
+  background-color: #ff5f00 !important;
+  border-color: #ff5f00 !important;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.jlc-carrito
+  .editor-styles-wrapper
+  table.wc-block-cart-items
+  .wc-block-cart-items__row
+  .wc-block-components-product-name,
+.jlc-carrito
+  table.wc-block-cart-items
+  .wc-block-cart-items__row
+  .wc-block-components-product-name {
+  color: #231f20 !important;
+}
+
+body.jlc-course-checkout-blocks
+  .wc-block-components-order-summary-item
+  .wc-block-components-order-summary-item__image
+  img {
+  border: 2px solid #231f29;
+}
+
+@media (max-width: 768px) {
+  body.jlc-course-checkout-blocks #content {
+    padding: 5px 10px 50px !important;
+  }
+
+  body.jlc-course-checkout-blocks .wp-block-woocommerce-checkout {
+    margin: 0;
+    padding-top: 0;
+  }
+
+  body.jlc-course-checkout-blocks .page-content {
+    padding: 0;
+  }
+
+  .wp-block-woocommerce-checkout-order-summary-block
+    .checkout-order-summary-block-fill {
+    border: 0px solid transparent !important;
+    border-radius: 0px !important;
+  }
+
+  .wp-block-woocommerce-checkout-order-summary-block.checkout-order-summary-block-fill-wrapper
+    .wc-block-components-title {
+    display: none !important;
+  }
+}

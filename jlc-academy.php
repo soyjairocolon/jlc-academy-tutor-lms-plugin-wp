@@ -4,7 +4,7 @@
  * Plugin Name: JLC Academy
  * Plugin URI: https://jairocolon.dev
  * Description: Personalizaciones para Tutor LMS, WooCommerce y Academy.
- * Version: 1.0.0
+ * Version: 1.0.6
  * Author: Jairo Colón Developer
  * Author URI: https://jairocolon.dev
  * License: GPL2+
@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('JLC_ACADEMY_VERSION', '1.0.0');
+define('JLC_ACADEMY_VERSION', '1.0.6');
 define('JLC_ACADEMY_FILE', __FILE__);
 define('JLC_ACADEMY_PATH', plugin_dir_path(__FILE__));
 define('JLC_ACADEMY_URL', plugin_dir_url(__FILE__));

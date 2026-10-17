@@ -14,6 +14,8 @@ class JLC_Loader
         self::load_dependencies();
 
         new JLC_Academy();
+        new JLC_Course_FAQ();
+        new JLC_Course_Checkout_Blocks();
     }
 
     /**
@@ -25,5 +27,7 @@ class JLC_Loader
         require_once JLC_ACADEMY_PATH . 'includes/class-jlc-assets.php';
         require_once JLC_ACADEMY_PATH . 'includes/class-jlc-hooks.php';
         require_once JLC_ACADEMY_PATH . 'includes/frontend/class-jlc-course-sidebar.php';
+        require_once JLC_ACADEMY_PATH . 'includes/frontend/class-jlc-course-faq.php';
+        require_once JLC_ACADEMY_PATH . 'includes/frontend/class-jlc-course-checkout-blocks.php';
     }
 }
