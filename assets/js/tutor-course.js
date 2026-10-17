@@ -27,27 +27,39 @@
     });
   };
 
-  const scrollToPurchase = () => {
-    const sidebar = document.querySelector(
-      ".tutor-course-details-page aside.tutor-col-xl-4",
-    );
+  const scrollToPurchase = (event) => {
+    if (event) {
+      event.preventDefault();
+    }
 
-    if (!sidebar) {
+    const coursePage = document.querySelector(".tutor-course-details-page");
+
+    if (!coursePage) {
       return;
     }
 
-    const purchaseButton = sidebar.querySelector(".tutor-add-to-cart-button");
+    const purchaseButton = coursePage.querySelector(
+      ".tutor-add-to-cart-button",
+    );
 
-    const target = purchaseButton || sidebar;
+    const viewCartLink = coursePage.querySelector(
+      ".tutor-woocommerce-view-cart",
+    );
 
-    const targetPosition =
-      target.getBoundingClientRect().top + window.scrollY - 100;
+    const target = purchaseButton || viewCartLink;
 
-    window.scrollTo({
-      top: Math.max(0, targetPosition),
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-        ? "auto"
-        : "smooth",
+    if (!target) {
+      return;
+    }
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    target.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "center",
+      inline: "nearest",
     });
   };
 

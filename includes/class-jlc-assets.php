@@ -1,3 +1,4 @@
+
 <?php
 
 if (!defined('ABSPATH')) {
@@ -36,6 +37,14 @@ class JLC_Assets
         wp_enqueue_script(
             'jlc-academy-tutor-course',
             JLC_ACADEMY_URL . 'assets/js/tutor-course.js',
+            [],
+            JLC_ACADEMY_VERSION,
+            true
+        );
+
+        wp_enqueue_script(
+            'jlc-academy-course-direct-checkout',
+            JLC_ACADEMY_URL . 'assets/js/frontend/jlc-course-direct-checkout.js',
             [],
             JLC_ACADEMY_VERSION,
             true
