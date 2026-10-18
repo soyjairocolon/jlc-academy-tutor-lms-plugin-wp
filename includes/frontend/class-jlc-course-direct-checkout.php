@@ -56,9 +56,6 @@ class JLC_Course_Direct_Checkout
             )
         );
 
-        /*
-         * Inserta los campos dentro del formulario original.
-         */
         $html = preg_replace(
             '/<\/form\s*>/i',
             $fields . '</form>',
@@ -66,10 +63,6 @@ class JLC_Course_Direct_Checkout
             1
         );
 
-        /*
-         * El botón conserva su diseño y clases de Tutor LMS,
-         * pero deja de enviar el parámetro add-to-cart.
-         */
         $html = preg_replace(
             '/(<button\b[^>]*\bname=["\'])add-to-cart(["\'])/i',
             '$1jlc-course-purchase$2',
@@ -127,7 +120,7 @@ class JLC_Course_Direct_Checkout
             return;
         }
 
-        /*
+        /**
          * Comprueba que el producto pertenece al curso
          * desde cuya página se realiza la solicitud.
          */
@@ -139,42 +132,37 @@ class JLC_Course_Direct_Checkout
 
         if (
             !$course_id ||
-            absint(tutor_utils()->get_course_product_id($course_id)) !== $product_id
+            absint(
+                tutor_utils()->get_course_product_id($course_id)
+            ) !== $product_id
         ) {
             return;
         }
 
-        /*
-         * Respeta la configuración de Tutor LMS cuando
-         * se requiere iniciar sesión para comprar.
+        /**
+         * Permite iniciar la compra sin una sesión de usuario.
+         * WooCommerce gestionará la cuenta durante el checkout.
          */
-        $guest_cart_enabled = tutor_utils()->get_option(
-            'enable_guest_course_cart'
-        );
+        $cart = WC()->cart;
 
-        if (!is_user_logged_in() && !$guest_cart_enabled) {
+        if (!$cart) {
             return;
         }
 
-        if (!WC()->cart) {
-            return;
-        }
-
-        /*
-         * Si el curso ya está en el carrito, continúa
-         * directamente al checkout.
+        /**
+         * Evita agregar el mismo curso más de una vez.
          */
-        foreach (WC()->cart->get_cart() as $cart_item) {
+        foreach ($cart->get_cart() as $cart_item) {
             if ((int) $cart_item['product_id'] === $product_id) {
                 wp_safe_redirect(wc_get_checkout_url());
                 exit;
             }
         }
 
-        /*
-         * Agrega el curso utilizando WooCommerce.
+        /**
+         * Agrega el curso al carrito de WooCommerce.
          */
-        $cart_item_key = WC()->cart->add_to_cart($product_id, 1);
+        $cart_item_key = $cart->add_to_cart($product_id, 1);
 
         if (!$cart_item_key) {
             return;
