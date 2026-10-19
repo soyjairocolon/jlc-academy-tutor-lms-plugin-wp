@@ -51,13 +51,28 @@ body.jlc-course-checkout-blocks
   margin-bottom: 0;
 }
 
+.wc-block-components-address-form
+  .wc-block-components-address-form__email
+  label[for="email"] {
+  font-size: 0;
+}
+
+.wc-block-components-address-form
+  .wc-block-components-address-form__email
+  label[for="email"]::after {
+  content: "Correo electrónico";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: inherit;
+}
+
 body.jlc-course-checkout-blocks label[for="billing-phone"] {
   font-size: 0;
 }
 
 body.jlc-course-checkout-blocks label[for="billing-phone"]::after {
   content: "Número de WhatsApp";
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   line-height: inherit;
 }
@@ -304,7 +319,7 @@ body.jlc-course-checkout-blocks
 
 @media (max-width: 768px) {
   body.jlc-course-checkout-blocks #content {
-    padding: 5px 10px 50px !important;
+    padding: 5px 20px 30px !important;
   }
 
   body.jlc-course-checkout-blocks .wp-block-woocommerce-checkout {
