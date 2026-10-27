@@ -25,7 +25,7 @@ class JLC_Course_FAQ
             || get_post_field(
                 'post_name',
                 get_queried_object_id()
-            ) !== 'curso-digital-facialista'
+            ) !== 'curso-pregrabado-facialista'
         ) {
             return;
         }
