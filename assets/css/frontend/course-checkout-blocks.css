@@ -219,7 +219,8 @@ body.jlc-course-checkout-blocks
 body.jlc-course-checkout-blocks
   .wc-block-components-checkout-place-order-button__text::after {
   content: "Pagar ahora";
-  font-size: 18px;
+  font-size: 19px;
+  text-transform: uppercase;
   font-weight: 700;
   line-height: 1.4;
 }

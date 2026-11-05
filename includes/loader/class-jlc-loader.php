@@ -30,6 +30,7 @@ class JLC_Loader
         require_once JLC_ACADEMY_PATH . 'includes/class-jlc-hooks.php';
 
         require_once JLC_ACADEMY_PATH . 'includes/frontend/class-jlc-course-sidebar.php';
+        require_once JLC_ACADEMY_PATH . 'includes/frontend/class-jlc-course-hero-banner.php';
         require_once JLC_ACADEMY_PATH . 'includes/frontend/class-jlc-course-faq.php';
         require_once JLC_ACADEMY_PATH . 'includes/frontend/class-jlc-course-checkout-blocks.php';
         require_once JLC_ACADEMY_PATH . 'includes/frontend/class-jlc-course-direct-checkout.php';
