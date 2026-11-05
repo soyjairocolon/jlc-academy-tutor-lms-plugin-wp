@@ -22,5 +22,6 @@ class JLC_Academy
         new JLC_Assets();
         new JLC_Hooks();
         new JLC_Course_Sidebar();
+        JLC_Course_Hero_Banner::init();
     }
 }

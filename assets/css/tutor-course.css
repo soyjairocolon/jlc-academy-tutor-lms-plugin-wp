@@ -34,11 +34,85 @@
 }
 
 .tutor-course-details-header {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .tutor-course-details-ratings {
   display: none;
+}
+
+.tutor-course-sidebar-card-pricing
+  .tutor-color-black
+  .woocommerce-Price-amount
+  bdi {
+  display: flex;
+}
+
+.tutor-course-sidebar-card-pricing
+  .tutor-color-black
+  .woocommerce-Price-amount
+  bdi::after {
+  content: "COP";
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.tutor-course-sidebar-card-pricing .tutor-color-muted {
+  display: flex;
+  padding: 16px 0 6px 0;
+  margin-left: 0;
+}
+
+.tutor-course-sidebar-card-pricing
+  .tutor-color-muted
+  .woocommerce-Price-amount {
+  font-size: 20px !important;
+}
+
+.tutor-course-sidebar-card-pricing
+  .tutor-color-muted
+  .woocommerce-Price-amount::before {
+  content: "Antes: " !important;
+  text-transform: none !important;
+}
+
+/* .tutor-course-sidebar-card-pricing
+  .tutor-color-muted
+  .woocommerce-Price-amount
+  bdi::after {
+  content: "COP: " !important;
+  font-size: 14px;
+  margin-left: 8px;
+  text-transform: none !important;
+} */
+
+.tutor-single-course-sidebar .tutor-sidebar-card {
+  background-color: #f4f6f9 !important;
+}
+
+.tutor-single-course-sidebar .tutor-sidebar-card::before {
+  content: "BLACK FRIDAY  ·  10% de descuento";
+  display: block;
+  width: fit-content;
+  padding: 14px 16px;
+  background: #231f20;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-left: 6px solid #ff5f00;
+  border-radius: 8px;
+  transform: rotate(-3deg);
+  transform-origin: left center;
+}
+
+.tutor-course-sidebar-card-pricing
+  .tutor-color-muted
+  .woocommerce-Price-amount::after {
+  display: none !important;
 }
 
 .tutor-course-details-header h1 {
@@ -934,7 +1008,7 @@ a.tutor-btn:focus:not(:disabled):not([disabled]):not(.disabled),
   }
 
   .tutor-course-details-page {
-    padding: 50px 12px !important;
+    padding: 30px 12px !important;
   }
 
   .tutor-course-details-header {
@@ -942,7 +1016,7 @@ a.tutor-btn:focus:not(:disabled):not([disabled]):not(.disabled),
   }
 
   .tutor-course-details-header h1 {
-    font-size: 32px !important;
+    font-size: 26px !important;
     text-align: center !important;
   }
 

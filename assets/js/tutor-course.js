@@ -68,7 +68,7 @@
 
     button.type = "button";
     button.className = className;
-    button.textContent = "Quiero adquirir el Curso";
+    button.textContent = "Quiero adquirir el Curso con el 10% Off";
 
     button.addEventListener("click", scrollToPurchase);
 
